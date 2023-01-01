@@ -1,0 +1,56 @@
+snippet fsa "Flutter scaffold"
+import "package:flutter/material.dart";
+
+void main() {
+  runApp(
+    MaterialApp(
+      title: "Flutter Demo",
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      debugShowCheckedModeBanner: false,
+      home: const HomePage(),
+    ),
+  );
+}
+
+class HomePage extends StatelessWidget {
+  const HomePage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Home Page"),
+      ),
+    );
+  }
+}
+endsnippet
+
+snippet stless "Flutter stateless widget"
+class $1 extends StatelessWidget {
+  const $1({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
+endsnippet
+
+snippet stful "Flutter statefule widget"
+class $1 extends StatefulWidget {
+  const $1({super.key});
+
+  @override
+  State<$1> createState() => _$1State();
+}
+
+class _$1State extends State<$1> {
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
+endsnippet
